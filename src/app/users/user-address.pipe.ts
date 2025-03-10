@@ -5,7 +5,7 @@ import { Address } from "./user.type";
   name: "userAddress",
 })
 export class UserAddressPipe implements PipeTransform {
-  transform(address: Address): unknown {
+  transform(address: Address, ...args: any[]): string {
     return `${address.city}, ${address.street} | ${address.zipcode}`;
   }
 }

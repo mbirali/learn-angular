@@ -1,10 +1,10 @@
-import { Directive, ElementRef, HostListener } from "@angular/core";
+import { Directive, ElementRef, HostListener, inject } from "@angular/core";
 
 @Directive({
   selector: "[laHighlight]",
 })
 export class HighlightDirective {
-  constructor(private _elementRef: ElementRef) {}
+  private _elementRef = inject(ElementRef);
 
   @HostListener("mouseenter") onMouseEnter() {
     this.highlight("#f0fdfa");

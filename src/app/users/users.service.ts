@@ -1,13 +1,13 @@
 import { HttpClient } from "@angular/common/http";
 import { inject, Injectable } from "@angular/core";
-import { IUserService } from "./users.interface";
+import { IUsersService } from "./users.interface";
 import { map, Observable } from "rxjs";
 import { User } from "./user.type";
 
 @Injectable({
   providedIn: "root",
 })
-export class UsersService implements IUserService {
+export class UsersService implements IUsersService {
   private readonly USERS_ENDPOINT = "data/users.json";
 
   private _httpClient = inject(HttpClient);

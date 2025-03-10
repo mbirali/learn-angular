@@ -1,7 +1,6 @@
-import { JsonPipe } from "@angular/common";
 import { Component, input } from "@angular/core";
-import { User } from "../user.type";
 import { UserAddressPipe } from "../user-address.pipe";
+import { User } from "../user.type";
 
 @Component({
   selector: "la-user-details",

@@ -9,8 +9,9 @@ import { userResolver, usersResolver } from "./users/users.resolver";
 
 export const routes: Routes = [
   {
-    path: "",
+    path: "", // "/"
     component: HomeComponent,
+    title: "Home Page",
   },
   {
     path: "users",
@@ -18,6 +19,7 @@ export const routes: Routes = [
     resolve: {
       users: usersResolver,
     },
+    title: "Users",
   },
   {
     path: "users/:userId",

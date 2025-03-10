@@ -8,7 +8,7 @@ import { usersInterceptor } from "./users/users.interceptor";
 export const appConfig: ApplicationConfig = {
   providers: [
     provideHttpClient(withInterceptors([usersInterceptor])),
-    provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes, withComponentInputBinding()),
+    provideZoneChangeDetection({ eventCoalescing: true }),
   ],
 };
